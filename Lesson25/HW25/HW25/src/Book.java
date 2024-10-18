@@ -2,31 +2,41 @@ import java.util.Arrays;
 
 public class Book {
 private String title;
-private Autor[] autors;
+private Author[] authors;
 private int year;
-private String myAutors;
 
-public Book(String title, Autor[] autors, int year) {
+public Book(String title, Author[] autors, int year) {
     this.title = title;
     this.year = year;
-    this.autors = new Autor[5];
+    this.authors = autors;
+   }
+   /* public Book(String title, int year, Author author ) {
+        this.title = title;
+        this.authors = new Author[1];
+        this.authors[0] = author;
+        this.year = year;
+    }
 
-}
+    public Book(String title, int year, Author... authors) {
+        this.title = title;
+        this.authors = authors;
+        this.year = year;
+    } */
 
-   public String AutorsString(Autor[] autors){
+
+    public String AutorsString(){
        StringBuilder autorsString = new StringBuilder();
-       for (int i = 0; i < autors.length; i++) {
-           if(autors[i]!=null){
-               autorsString.append(autors[i]).append(";");
+       for (int i = 0; i < authors.length; i++) {
+           if(authors[i]!=null){
+               autorsString.append(authors[i]).append(",");
            }
        }
-       myAutors = autorsString.toString();
-       return myAutors;
+        return autorsString.toString();
    }
 
     @Override
     public String toString() {
-        return String.format("%s - %s (%d)",gettitle(), getmyAutors(), getyear());
+        return String.format("\"%s\" - %s (%d)",gettitle(), AutorsString(), getyear());
     }
 
     public String gettitle() {
@@ -36,7 +46,8 @@ public Book(String title, Autor[] autors, int year) {
     public int getyear() {
         return year;
     }
-    public String getmyAutors() {
-        return myAutors;
+
+    public Author[] getAuthors() {
+        return authors;
     }
 }

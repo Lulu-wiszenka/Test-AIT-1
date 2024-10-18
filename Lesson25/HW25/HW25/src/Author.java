@@ -1,9 +1,9 @@
-public class Autor {
+public class Author {
    private String fName;
    private String lName;
    private int age;
 
-  public Autor(String fName, String lName, int age) {
+  public Author(String fName, String lName, int age) {
       this.fName = fName;
       this.lName = lName;
       this.age = age;
