@@ -5,10 +5,10 @@ private String title;
 private Author[] authors;
 private int year;
 
-public Book(String title, Author[] autors, int year) {
+public Book(String title, Author[] authors, int year) {
     this.title = title;
     this.year = year;
-    this.authors = autors;
+    this.authors = authors;
    }
    /* public Book(String title, int year, Author author ) {
         this.title = title;

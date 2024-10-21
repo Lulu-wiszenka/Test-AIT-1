@@ -3,7 +3,11 @@ public class Book {
     private Author[] authors;
     private int year;
 
-
+    public Book() {
+        this.title = title;
+        this.authors = authors;
+        this.year = year;
+    }
 
     public Book(String title, int year, Author... authors) {
         this.title = title;
